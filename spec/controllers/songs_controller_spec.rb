@@ -29,6 +29,7 @@ RSpec.describe SongsController, type: :controller do
     end
 
     it "views a single song" do
+      binding.pry
       get :show, { id: song.id }
       expect(assigns(:song)).to eq(song)
     end
